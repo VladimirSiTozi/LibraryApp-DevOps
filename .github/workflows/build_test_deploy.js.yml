@@ -25,10 +25,10 @@ jobs:
     - run: npm install
 
     - name: Start Back-End
-    - run: npm run server-be &
+    - run: npm server-be &
 
     - name: Start Front-End
-    - run: npm run start-fe &
+    - run: npm start-fe &
     
     - name: Start UI Tests
     - run: npm run test-ui
