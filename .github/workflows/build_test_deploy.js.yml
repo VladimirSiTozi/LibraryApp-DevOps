@@ -8,11 +8,10 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - name: checkout Repo
+    - name: Checkout Repo
       uses: actions/checkout@v4
       
     - name: Use Node.js v20
@@ -21,16 +20,14 @@ jobs:
         node-version: 20
         cache: 'npm'
 
+    - name: Install NPM modules
+      run: npm install
+
     - name: Start Back-End
       run: npm server-be &
-    
+
     - name: Start Front-End
       run: npm start-fe &
     
     - name: Start UI Tests
       run: npm run test-ui
-    
-    - name: Start UI Tests
-    - run: npm run test-ui
-
-    
