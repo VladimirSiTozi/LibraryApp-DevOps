@@ -1,1 +1,0 @@
-export const settings = {host:"https://libraryapp-devops.onrender.com"}
