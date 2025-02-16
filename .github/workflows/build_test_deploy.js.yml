@@ -23,6 +23,9 @@ jobs:
     - name: Install NPM modules
       run: npm install
 
+    - name: Replace the BackEnd endpoint
+      run: echo "export const settings = {host:\"https://localhost:3030\"}" > src/config.js
+
     - name: Start Back-End
       run: npm run server-be &
 
