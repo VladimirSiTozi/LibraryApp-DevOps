@@ -30,7 +30,7 @@ jobs:
     - name: Install Browsers
       run: npx playwright install 
     - name: Execute UI tests
-      run: npm run test:ui
+      run: npm run test-ui
 
   deploy-be:
     needs: build_test
